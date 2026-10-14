@@ -1,0 +1,17 @@
+// Build settings for the app target that you may want to override locally.
+// Local values (API keys, signing team) go in Config/Secrets.xcconfig, which is gitignored.
+// Start from Config/Secrets.xcconfig.example.
+
+// Signing defaults to ad-hoc ("Sign to Run Locally") so the project builds on any Mac.
+// Ad-hoc identities change on every build, so macOS re-asks for the "control Music" permission
+// and Keychain access after each rebuild. Set DEVELOPMENT_TEAM in Secrets.xcconfig to avoid that.
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = -
+DEVELOPMENT_TEAM =
+
+// Baked into Info.plist and read at runtime (see AppConfig.swift).
+DISCORD_CLIENT_ID =
+LASTFM_API_KEY =
+LASTFM_SHARED_SECRET =
+
+#include? "Secrets.xcconfig"
